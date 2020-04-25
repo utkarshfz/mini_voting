@@ -40,6 +40,9 @@ admin
 stu
     Use: All functions at Voter’s end
 
+
+U need to add blank.txt file manually
+
 Recommended Compiler: Turbo C++
 Can be run on any C compiler
 #### #mini project #voting system #c project
