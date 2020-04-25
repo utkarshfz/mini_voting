@@ -1,0 +1,303 @@
+Flawfinder version 2.0.10, (C) 2001-2019 David A. Wheeler.
+Number of rules (primarily dangerous function names) in C/C++ ruleset: 223
+Examining main.c
+Examining election.h
+
+FINAL RESULTS:
+
+election.h:24:  [5] (buffer) gets:
+  Does not check for buffer overflows (CWE-120, CWE-20). Use fgets() instead.
+election.h:94:  [4] (buffer) strcpy:
+  Does not check for buffer overflows when copying to destination [MS-banned]
+  (CWE-120). Consider using snprintf, strcpy_s, or strlcpy (warning: strncpy
+  easily misused).
+election.h:225:  [4] (buffer) scanf:
+  The scanf() family's %s operation, without a limit specification, permits
+  buffer overflows (CWE-120, CWE-20). Specify a limit to %s, or use a
+  different input function.
+election.h:235:  [4] (buffer) scanf:
+  The scanf() family's %s operation, without a limit specification, permits
+  buffer overflows (CWE-120, CWE-20). Specify a limit to %s, or use a
+  different input function.
+election.h:263:  [4] (buffer) scanf:
+  The scanf() family's %s operation, without a limit specification, permits
+  buffer overflows (CWE-120, CWE-20). Specify a limit to %s, or use a
+  different input function.
+election.h:307:  [4] (buffer) scanf:
+  The scanf() family's %s operation, without a limit specification, permits
+  buffer overflows (CWE-120, CWE-20). Specify a limit to %s, or use a
+  different input function.
+election.h:333:  [4] (buffer) fscanf:
+  The scanf() family's %s operation, without a limit specification, permits
+  buffer overflows (CWE-120, CWE-20). Specify a limit to %s, or use a
+  different input function.
+election.h:341:  [4] (buffer) fscanf:
+  The scanf() family's %s operation, without a limit specification, permits
+  buffer overflows (CWE-120, CWE-20). Specify a limit to %s, or use a
+  different input function.
+election.h:359:  [4] (buffer) scanf:
+  The scanf() family's %s operation, without a limit specification, permits
+  buffer overflows (CWE-120, CWE-20). Specify a limit to %s, or use a
+  different input function.
+election.h:456:  [4] (buffer) scanf:
+  The scanf() family's %s operation, without a limit specification, permits
+  buffer overflows (CWE-120, CWE-20). Specify a limit to %s, or use a
+  different input function.
+election.h:8:  [2] (buffer) char:
+  Statically-sized arrays can be improperly restricted, leading to potential
+  overflows or other issues (CWE-119!/CWE-120). Perform bounds checking, use
+  functions that limit length, or ensure that the size is larger than the
+  maximum possible length.
+election.h:13:  [2] (buffer) char:
+  Statically-sized arrays can be improperly restricted, leading to potential
+  overflows or other issues (CWE-119!/CWE-120). Perform bounds checking, use
+  functions that limit length, or ensure that the size is larger than the
+  maximum possible length.
+election.h:28:  [2] (misc) fopen:
+  Check when opening files - can an attacker redirect it (via symlinks),
+  force the opening of special file type (e.g., device files), move things
+  around to create a race condition, control its ancestors, or change its
+  contents? (CWE-362).
+election.h:41:  [2] (buffer) char:
+  Statically-sized arrays can be improperly restricted, leading to potential
+  overflows or other issues (CWE-119!/CWE-120). Perform bounds checking, use
+  functions that limit length, or ensure that the size is larger than the
+  maximum possible length.
+election.h:46:  [2] (buffer) sprintf:
+  Does not check for buffer overflows (CWE-120). Use sprintf_s, snprintf, or
+  vsnprintf. Risk is low because the source has a constant maximum length.
+election.h:47:  [2] (misc) fopen:
+  Check when opening files - can an attacker redirect it (via symlinks),
+  force the opening of special file type (e.g., device files), move things
+  around to create a race condition, control its ancestors, or change its
+  contents? (CWE-362).
+election.h:54:  [2] (buffer) char:
+  Statically-sized arrays can be improperly restricted, leading to potential
+  overflows or other issues (CWE-119!/CWE-120). Perform bounds checking, use
+  functions that limit length, or ensure that the size is larger than the
+  maximum possible length.
+election.h:57:  [2] (buffer) char:
+  Statically-sized arrays can be improperly restricted, leading to potential
+  overflows or other issues (CWE-119!/CWE-120). Perform bounds checking, use
+  functions that limit length, or ensure that the size is larger than the
+  maximum possible length.
+election.h:58:  [2] (misc) fopen:
+  Check when opening files - can an attacker redirect it (via symlinks),
+  force the opening of special file type (e.g., device files), move things
+  around to create a race condition, control its ancestors, or change its
+  contents? (CWE-362).
+election.h:70:  [2] (buffer) char:
+  Statically-sized arrays can be improperly restricted, leading to potential
+  overflows or other issues (CWE-119!/CWE-120). Perform bounds checking, use
+  functions that limit length, or ensure that the size is larger than the
+  maximum possible length.
+election.h:73:  [2] (buffer) char:
+  Statically-sized arrays can be improperly restricted, leading to potential
+  overflows or other issues (CWE-119!/CWE-120). Perform bounds checking, use
+  functions that limit length, or ensure that the size is larger than the
+  maximum possible length.
+election.h:116:  [2] (buffer) char:
+  Statically-sized arrays can be improperly restricted, leading to potential
+  overflows or other issues (CWE-119!/CWE-120). Perform bounds checking, use
+  functions that limit length, or ensure that the size is larger than the
+  maximum possible length.
+election.h:120:  [2] (buffer) char:
+  Statically-sized arrays can be improperly restricted, leading to potential
+  overflows or other issues (CWE-119!/CWE-120). Perform bounds checking, use
+  functions that limit length, or ensure that the size is larger than the
+  maximum possible length.
+election.h:125:  [2] (buffer) sprintf:
+  Does not check for buffer overflows (CWE-120). Use sprintf_s, snprintf, or
+  vsnprintf. Risk is low because the source has a constant maximum length.
+election.h:126:  [2] (misc) fopen:
+  Check when opening files - can an attacker redirect it (via symlinks),
+  force the opening of special file type (e.g., device files), move things
+  around to create a race condition, control its ancestors, or change its
+  contents? (CWE-362).
+election.h:137:  [2] (misc) fopen:
+  Check when opening files - can an attacker redirect it (via symlinks),
+  force the opening of special file type (e.g., device files), move things
+  around to create a race condition, control its ancestors, or change its
+  contents? (CWE-362).
+election.h:164:  [2] (buffer) sprintf:
+  Does not check for buffer overflows (CWE-120). Use sprintf_s, snprintf, or
+  vsnprintf. Risk is low because the source has a constant maximum length.
+election.h:165:  [2] (misc) fopen:
+  Check when opening files - can an attacker redirect it (via symlinks),
+  force the opening of special file type (e.g., device files), move things
+  around to create a race condition, control its ancestors, or change its
+  contents? (CWE-362).
+election.h:179:  [2] (misc) fopen:
+  Check when opening files - can an attacker redirect it (via symlinks),
+  force the opening of special file type (e.g., device files), move things
+  around to create a race condition, control its ancestors, or change its
+  contents? (CWE-362).
+election.h:215:  [2] (buffer) char:
+  Statically-sized arrays can be improperly restricted, leading to potential
+  overflows or other issues (CWE-119!/CWE-120). Perform bounds checking, use
+  functions that limit length, or ensure that the size is larger than the
+  maximum possible length.
+election.h:216:  [2] (buffer) char:
+  Statically-sized arrays can be improperly restricted, leading to potential
+  overflows or other issues (CWE-119!/CWE-120). Perform bounds checking, use
+  functions that limit length, or ensure that the size is larger than the
+  maximum possible length.
+election.h:217:  [2] (buffer) char:
+  Statically-sized arrays can be improperly restricted, leading to potential
+  overflows or other issues (CWE-119!/CWE-120). Perform bounds checking, use
+  functions that limit length, or ensure that the size is larger than the
+  maximum possible length.
+election.h:220:  [2] (buffer) char:
+  Statically-sized arrays can be improperly restricted, leading to potential
+  overflows or other issues (CWE-119!/CWE-120). Perform bounds checking, use
+  functions that limit length, or ensure that the size is larger than the
+  maximum possible length.
+election.h:259:  [2] (misc) fopen:
+  Check when opening files - can an attacker redirect it (via symlinks),
+  force the opening of special file type (e.g., device files), move things
+  around to create a race condition, control its ancestors, or change its
+  contents? (CWE-362).
+election.h:296:  [2] (misc) fopen:
+  Check when opening files - can an attacker redirect it (via symlinks),
+  force the opening of special file type (e.g., device files), move things
+  around to create a race condition, control its ancestors, or change its
+  contents? (CWE-362).
+election.h:312:  [2] (buffer) sprintf:
+  Does not check for buffer overflows (CWE-120). Use sprintf_s, snprintf, or
+  vsnprintf. Risk is low because the source has a constant maximum length.
+election.h:328:  [2] (misc) fopen:
+  Check when opening files - can an attacker redirect it (via symlinks),
+  force the opening of special file type (e.g., device files), move things
+  around to create a race condition, control its ancestors, or change its
+  contents? (CWE-362).
+election.h:347:  [2] (buffer) sprintf:
+  Does not check for buffer overflows (CWE-120). Use sprintf_s, snprintf, or
+  vsnprintf. Risk is low because the source has a constant maximum length.
+election.h:348:  [2] (misc) fopen:
+  Check when opening files - can an attacker redirect it (via symlinks),
+  force the opening of special file type (e.g., device files), move things
+  around to create a race condition, control its ancestors, or change its
+  contents? (CWE-362).
+election.h:440:  [2] (buffer) char:
+  Statically-sized arrays can be improperly restricted, leading to potential
+  overflows or other issues (CWE-119!/CWE-120). Perform bounds checking, use
+  functions that limit length, or ensure that the size is larger than the
+  maximum possible length.
+election.h:441:  [2] (buffer) char:
+  Statically-sized arrays can be improperly restricted, leading to potential
+  overflows or other issues (CWE-119!/CWE-120). Perform bounds checking, use
+  functions that limit length, or ensure that the size is larger than the
+  maximum possible length.
+election.h:442:  [2] (buffer) char:
+  Statically-sized arrays can be improperly restricted, leading to potential
+  overflows or other issues (CWE-119!/CWE-120). Perform bounds checking, use
+  functions that limit length, or ensure that the size is larger than the
+  maximum possible length.
+election.h:497:  [2] (buffer) sprintf:
+  Does not check for buffer overflows (CWE-120). Use sprintf_s, snprintf, or
+  vsnprintf. Risk is low because the source has a constant maximum length.
+election.h:498:  [2] (misc) fopen:
+  Check when opening files - can an attacker redirect it (via symlinks),
+  force the opening of special file type (e.g., device files), move things
+  around to create a race condition, control its ancestors, or change its
+  contents? (CWE-362).
+election.h:571:  [2] (buffer) sprintf:
+  Does not check for buffer overflows (CWE-120). Use sprintf_s, snprintf, or
+  vsnprintf. Risk is low because the source has a constant maximum length.
+election.h:572:  [2] (misc) fopen:
+  Check when opening files - can an attacker redirect it (via symlinks),
+  force the opening of special file type (e.g., device files), move things
+  around to create a race condition, control its ancestors, or change its
+  contents? (CWE-362).
+election.h:130:  [1] (buffer) strlen:
+  Does not handle strings that are not \0-terminated; if given one it may
+  perform an over-read (it could cause a crash if unprotected) (CWE-126).
+election.h:148:  [1] (buffer) getchar:
+  Check buffer boundaries if used in a loop including recursive loops
+  (CWE-120, CWE-20).
+election.h:154:  [1] (buffer) getchar:
+  Check buffer boundaries if used in a loop including recursive loops
+  (CWE-120, CWE-20).
+election.h:172:  [1] (buffer) strlen:
+  Does not handle strings that are not \0-terminated; if given one it may
+  perform an over-read (it could cause a crash if unprotected) (CWE-126).
+election.h:207:  [1] (buffer) getchar:
+  Check buffer boundaries if used in a loop including recursive loops
+  (CWE-120, CWE-20).
+election.h:229:  [1] (buffer) getchar:
+  Check buffer boundaries if used in a loop including recursive loops
+  (CWE-120, CWE-20).
+election.h:240:  [1] (buffer) getchar:
+  Check buffer boundaries if used in a loop including recursive loops
+  (CWE-120, CWE-20).
+election.h:247:  [1] (buffer) getchar:
+  Check buffer boundaries if used in a loop including recursive loops
+  (CWE-120, CWE-20).
+election.h:300:  [1] (buffer) getchar:
+  Check buffer boundaries if used in a loop including recursive loops
+  (CWE-120, CWE-20).
+election.h:318:  [1] (buffer) getchar:
+  Check buffer boundaries if used in a loop including recursive loops
+  (CWE-120, CWE-20).
+election.h:353:  [1] (buffer) getchar:
+  Check buffer boundaries if used in a loop including recursive loops
+  (CWE-120, CWE-20).
+election.h:415:  [1] (buffer) getchar:
+  Check buffer boundaries if used in a loop including recursive loops
+  (CWE-120, CWE-20).
+election.h:424:  [1] (buffer) getchar:
+  Check buffer boundaries if used in a loop including recursive loops
+  (CWE-120, CWE-20).
+election.h:459:  [1] (buffer) strlen:
+  Does not handle strings that are not \0-terminated; if given one it may
+  perform an over-read (it could cause a crash if unprotected) (CWE-126).
+election.h:463:  [1] (buffer) getchar:
+  Check buffer boundaries if used in a loop including recursive loops
+  (CWE-120, CWE-20).
+election.h:470:  [1] (buffer) getchar:
+  Check buffer boundaries if used in a loop including recursive loops
+  (CWE-120, CWE-20).
+election.h:478:  [1] (buffer) getchar:
+  Check buffer boundaries if used in a loop including recursive loops
+  (CWE-120, CWE-20).
+election.h:488:  [1] (buffer) getchar:
+  Check buffer boundaries if used in a loop including recursive loops
+  (CWE-120, CWE-20).
+election.h:503:  [1] (buffer) strlen:
+  Does not handle strings that are not \0-terminated; if given one it may
+  perform an over-read (it could cause a crash if unprotected) (CWE-126).
+election.h:510:  [1] (buffer) getchar:
+  Check buffer boundaries if used in a loop including recursive loops
+  (CWE-120, CWE-20).
+election.h:534:  [1] (buffer) getchar:
+  Check buffer boundaries if used in a loop including recursive loops
+  (CWE-120, CWE-20).
+election.h:536:  [1] (buffer) getchar:
+  Check buffer boundaries if used in a loop including recursive loops
+  (CWE-120, CWE-20).
+election.h:538:  [1] (buffer) getchar:
+  Check buffer boundaries if used in a loop including recursive loops
+  (CWE-120, CWE-20).
+election.h:540:  [1] (buffer) getchar:
+  Check buffer boundaries if used in a loop including recursive loops
+  (CWE-120, CWE-20).
+election.h:555:  [1] (buffer) getchar:
+  Check buffer boundaries if used in a loop including recursive loops
+  (CWE-120, CWE-20).
+election.h:565:  [1] (buffer) getchar:
+  Check buffer boundaries if used in a loop including recursive loops
+  (CWE-120, CWE-20).
+
+ANALYSIS SUMMARY:
+
+Hits = 72
+Lines analyzed = 622 in approximately 0.02 seconds (41273 lines/second)
+Physical Source Lines of Code (SLOC) = 555
+Hits@level = [0]  81 [1]  26 [2]  36 [3]   0 [4]   9 [5]   1
+Hits@level+ = [0+] 153 [1+]  72 [2+]  46 [3+]  10 [4+]  10 [5+]   1
+Hits/KSLOC@level+ = [0+] 275.676 [1+] 129.73 [2+] 82.8829 [3+] 18.018 [4+] 18.018 [5+] 1.8018
+Minimum risk level = 1
+Not every hit is necessarily a security vulnerability.
+There may be other security vulnerabilities; review your code!
+See 'Secure Programming HOWTO'
+(https://dwheeler.com/secure-programs) for more information.
