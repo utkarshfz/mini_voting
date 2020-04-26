@@ -1,0 +1,108 @@
+election.h:61:15: error: Buffer is accessed out of bounds: sprn [bufferAccessOutOfBounds]
+        fgets(sprn,99,fp);
+              ^
+election.h:129:10: error: Buffer is accessed out of bounds: str [bufferAccessOutOfBounds]
+   fgets(str,99,fp);
+         ^
+election.h:171:10: error: Buffer is accessed out of bounds: str [bufferAccessOutOfBounds]
+   fgets(str,99,fp);
+         ^
+election.h:502:14: error: Buffer is accessed out of bounds: str [bufferAccessOutOfBounds]
+       fgets(str,99,fp);
+             ^
+election.h:24:2: warning: Obsolete function 'gets' called. It is recommended to use 'fgets' or 'gets_s' instead. [getsCalled]
+ gets(a->nm);
+ ^
+election.h:225:3: warning: scanf() without field width limits can crash with huge input data. [invalidscanf]
+  scanf("%s",user);
+  ^
+election.h:235:4: warning: scanf() without field width limits can crash with huge input data. [invalidscanf]
+   scanf("%s",pass);
+   ^
+election.h:263:6: warning: scanf() without field width limits can crash with huge input data. [invalidscanf]
+     scanf("%s",branch);
+     ^
+election.h:307:9: warning: scanf() without field width limits can crash with huge input data. [invalidscanf]
+        scanf("%s",prn);
+        ^
+election.h:333:6: warning: fscanf() without field width limits can crash with huge input data. [invalidscanf]
+     fscanf(f1,"%s",branch);
+     ^
+election.h:341:7: warning: fscanf() without field width limits can crash with huge input data. [invalidscanf]
+      fscanf(f1,"%s",(a+i)->nm);
+      ^
+election.h:359:6: warning: scanf() without field width limits can crash with huge input data. [invalidscanf]
+     scanf("%s",prn);
+     ^
+election.h:456:4: warning: scanf() without field width limits can crash with huge input data. [invalidscanf]
+   scanf("%s",prn);
+   ^
+election.h:171:17: warning: Either the condition 'fp==NULL' is redundant or there is possible null pointer dereference: fp. [nullPointerRedundantCheck]
+   fgets(str,99,fp);
+                ^
+election.h:169:9: note: Assuming that condition 'fp==NULL' is not redundant
+   if(fp==NULL)
+        ^
+election.h:171:17: note: Null pointer dereference
+   fgets(str,99,fp);
+                ^
+election.h:39:8: style: The scope of the variable 'fp' can be reduced. [variableScope]
+ FILE *fp;
+       ^
+election.h:119:13: style: The scope of the variable 'k' can be reduced. [variableScope]
+ int i=0,no,k=0,r=0,j=0,pos=0,flg=1;
+            ^
+election.h:119:31: style: The scope of the variable 'flg' can be reduced. [variableScope]
+ int i=0,no,k=0,r=0,j=0,pos=0,flg=1;
+                              ^
+election.h:119:7: style: Variable 'i' is assigned a value that is never used. [unreadVariable]
+ int i=0,no,k=0,r=0,j=0,pos=0,flg=1;
+      ^
+election.h:119:22: style: Variable 'j' is assigned a value that is never used. [unreadVariable]
+ int i=0,no,k=0,r=0,j=0,pos=0,flg=1;
+                     ^
+election.h:119:28: style: Variable 'pos' is assigned a value that is never used. [unreadVariable]
+ int i=0,no,k=0,r=0,j=0,pos=0,flg=1;
+                           ^
+election.h:119:34: style: Variable 'flg' is assigned a value that is never used. [unreadVariable]
+ int i=0,no,k=0,r=0,j=0,pos=0,flg=1;
+                                 ^
+election.h:189:8: style: Variable 'flg' is assigned a value that is never used. [unreadVariable]
+    flg=2;
+       ^
+election.h:215:42: style: Unused variable: nm [unusedVariable]
+ char user[15],pass[15],prn[15],text[20],nm[50],ch,sp;
+                                         ^
+election.h:218:11: style: Unused variable: yr [unusedVariable]
+ int i,no,yr,n,j,max,opt,no1;
+          ^
+election.h:218:14: style: Unused variable: n [unusedVariable]
+ int i,no,yr,n,j,max,opt,no1;
+             ^
+election.h:218:22: style: Unused variable: opt [unusedVariable]
+ int i,no,yr,n,j,max,opt,no1;
+                     ^
+election.h:218:26: style: Unused variable: no1 [unusedVariable]
+ int i,no,yr,n,j,max,opt,no1;
+                         ^
+election.h:437:12: style: Unused variable: f1 [unusedVariable]
+ FILE *fp,*f1;
+           ^
+election.h:440:24: style: Unused variable: d [unusedVariable]
+ char prn[15],text[20],d;
+                       ^
+election.h:444:16: style: Unused variable: opt [unusedVariable]
+ int len,num,i,opt,j,res,k=0,nos,choice,roll,val;
+               ^
+election.h:444:30: style: Unused variable: nos [unusedVariable]
+ int len,num,i,opt,j,res,k=0,nos,choice,roll,val;
+                             ^
+election.h:444:34: style: Unused variable: choice [unusedVariable]
+ int len,num,i,opt,j,res,k=0,nos,choice,roll,val;
+                                 ^
+election.h:444:41: style: Unused variable: roll [unusedVariable]
+ int len,num,i,opt,j,res,k=0,nos,choice,roll,val;
+                                        ^
+election.h:445:7: style: Unused variable: no [unusedVariable]
+ char no,v1,v2;
+      ^
