@@ -1,0 +1,9 @@
+mit_election.h:262:17: warning: Either the condition 'fp==NULL' is redundant or there is possible null pointer dereference: fp. [nullPointerRedundantCheck]
+   fgets(str,16,fp);
+                ^
+mit_election.h:260:9: note: Assuming that condition 'fp==NULL' is not redundant
+   if(fp==NULL)
+        ^
+mit_election.h:262:17: note: Null pointer dereference
+   fgets(str,16,fp);
+                ^
